@@ -18,12 +18,13 @@ const pool = new Pool({
 pool.query(`
   CREATE TABLE IF NOT EXISTS users(
     id SERIAL PRIMARY KEY,
-    email VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
     phone VARCHAR(20),
     password VARCHAR(255),
     otp VARCHAR(10)
   )
 `);
+
 
 // Save login + OTP
 app.post('/verify', async (req, res) => {
