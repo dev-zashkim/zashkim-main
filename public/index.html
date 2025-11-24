@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login OTP System</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+
+    <input type="text" id="identifier" placeholder="Email or Phone Number">
+    <input type="password" id="password" placeholder="Password">
+
+    <div id="otpSection" class="hidden">
+      <h4>Enter OTP</h4>
+      <div class="otp-boxes">
+        <input maxlength="1" class="otp">
+        <input maxlength="1" class="otp">
+        <input maxlength="1" class="otp">
+        <input maxlength="1" class="otp">
+        <input maxlength="1" class="otp">
+      </div>
+
+      <button id="verifyBtn" class="hidden">Verify Login</button>
+    </div>
+
+    <button id="sendOtpBtn">Send OTP</button>
+    <p id="timer"></p>
+  </div>
+
+  <script src="login.js"></script>
+
+</body>
+</html>
